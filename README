@@ -1,0 +1,13 @@
+PROJECT NAME: Expense Tracker
+
+INTRODUCTION:
+Keeping track of your expenses is crucial to the financial stability of your personal or business budget.
+To accurately and effectively examine all of your spending, you must maintain an accurate daily log of your assets and expenses.
+What if you could use an application to do all of this work and just provide the data? 
+This application will use concepts of python to create an expense tracker for daily to monthly expenses.
+
+FEATURES;
+- 1) Add Expense: User can add expenses by clicking 1, then input the amount and category of the expense 
+- 2) View Total Expense: After inputting different expenses, users can see what the total expenses
+- 3) View Expenses By Category: Users can input a category to see how much they have spent in that category only
+- User Friendly Interface: Easy to use for anyone with easy interaction
