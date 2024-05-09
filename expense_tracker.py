@@ -39,6 +39,21 @@ class ExpenseTracker:
         """
         return self.expenses.get(category, [])
 
+    def get_categories(self):
+        """Get all categories with expenses."""
+        return list(self.expenses.keys())
+
+    def get_category_total(self, category):
+        """Calculate total expenses for a specific category.
+
+        Args:
+            category (str): The category to calculate total expenses.
+
+        Returns:
+            float: The total expenses for the given category.
+        """
+        return sum(self.expenses.get(category, []))
+
 def main():
     """Main function to interact with the expense tracker."""
     tracker = ExpenseTracker()
@@ -48,9 +63,11 @@ def main():
         print("1. Add Expense")
         print("2. View Total Expenses")
         print("3. View Expenses by Category")
-        print("4. Exit")
+        print("4. View All Categories")
+        print("5. View Total Expenses by Category")
+        print("6. Exit")
 
-        choice = input("Enter your choice (1-4): ")
+        choice = input("Enter your choice (1-6): ")
 
         if choice == "1":
             category = input("Enter expense category: ")
@@ -70,11 +87,22 @@ def main():
                 print(f" - ${expense:.2f}")
 
         elif choice == "4":
+            categories = tracker.get_categories()
+            print("Categories with expenses:")
+            for category in categories:
+                print(f" - {category}")
+
+        elif choice == "5":
+            category = input("Enter category to view total expenses: ")
+            total_category_expenses = tracker.get_category_total(category)
+            print(f"Total expenses in '{category}': ${total_category_expenses:.2f}")
+
+        elif choice == "6":
             print("Exiting Expense Tracker. Goodbye!")
             break
 
         else:
-            print("Invalid choice. Please enter a number from 1 to 4.")
+            print("Invalid choice. Please enter a number from 1 to 6.")
 
 if __name__ == "__main__":
     main()
