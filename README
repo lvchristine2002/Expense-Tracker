@@ -11,3 +11,5 @@ FEATURES;
 - 2) View Total Expense: After inputting different expenses, users can see what the total expenses
 - 3) View Expenses By Category: Users can input a category to see how much they have spent in that category only
 - User Friendly Interface: Easy to use for anyone with easy interaction
+- 4) View All Expenses: Views all expenses by category
+- 5) View Total Expenses By Category: Allows viewing for total expenses in specific category
